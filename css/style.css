@@ -1,0 +1,28 @@
+body {
+	background: #fefefe;
+}
+.title {
+	margin: 0;
+	margin-bottom: 30px;
+	color: #d26c22;
+	font-size: 45px;
+	text-align: center;
+	padding: 10px;
+	border-bottom: 1px solid #ccc;
+}
+.item {
+	margin: 0;
+	padding: 25px;
+}
+.item > h2 {
+	font-weight: 600;
+	font-size: 35px;
+	padding: 0;
+	margin: 5px 0;
+}
+.item > h3 {
+	color: #d26c22;
+	font-size: 28px;
+	padding: 0;
+	margin: 0 0 10px 0;
+}
