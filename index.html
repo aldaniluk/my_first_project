@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <title>My First Work!</title>
+    <link rel='stylesheet' href='css/bootstrap.min.css' type='text/css'>
+    <link rel='stylesheet' href='css/style.css' type='text/css'>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/handlebars.js"></script>
+    <script src="js/script.js"></script>
+    
+ </head>
+<body>
+
+<div class="container">
+  
+  <div class="title col-xs-12">
+    Current weather and forecasts in your city
+  </div>
+
+  <div class="ready"></div>
+
+   <script id="template" type="text/x-handlebars-template">
+    {{#each this}}
+      <div class="item col-sm-6 col-md-4">
+          <h2>{{name}}, {{sys.country}}</h2>
+          <h3>{{main.temp}}°C</h3>
+          <table class="table table-condensed">
+            <tr>
+              <td>Wind:</td> 
+              <td>{{wind.speed}} m/s</td>
+            </tr>
+            <tr>
+              <td>Humidity:</td> 
+              <td>{{main.humidity}} %</td>
+            </tr>
+            <tr>
+              <td>Pressure:</td> 
+              <td>{{main.pressure}} hpa</td>
+            </tr>
+            <tr>
+              <td>Coord:</td> 
+              <td>[{{coord.lat}}, {{coord.lon}}]</td>
+            </tr>
+         </table>
+      </div>
+    {{/each}}
+   </script>
+
+</div>
+
+</body>
+</html> 
