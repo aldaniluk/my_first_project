@@ -12,7 +12,8 @@ var array = [625143,623549,630429,625665,629634,620127];
 var func = function() {
   $.ajax({
     type: 'GET',
-    url: 'http://api.openweathermap.org/data/2.5/group?id='+array[i]+'&units=metric&APPID=a6893c5e7802864d24ec2f1d62c5cc70'
+    url: 'http://api.openweathermap.org/data/2.5/group?id='+array[i]+'&units=metric&APPID=a6893c5e7802864d24ec2f1d62c5cc70',
+    timeout: 5000
   })
   .done(function(data) { 
         console.log("success"); 
@@ -26,9 +27,9 @@ var func = function() {
           }
           i++;
   })
-  .fail(function() {
-      console.log("error"); 
+  .fail(function(e) {
+      console.log("error:"+ e['statusText']); 
   })
 };
 
-var myTimer = setInterval(func, 1000);
+var myTimer = setInterval(func, 2000);
